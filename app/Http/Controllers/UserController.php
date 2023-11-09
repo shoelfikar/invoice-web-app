@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class UserController extends Controller
+{
+    public function index()
+    {
+        return view('pages.users.index');
+    }
+
+    public function getUsers(Request $request)
+    {
+        if($request->ajax()) {
+            return response()->json([
+                'status' => 'success'
+            ], 200);
+        }
+    }
+}
