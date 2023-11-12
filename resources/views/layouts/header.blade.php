@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="{{url('vendor/assets/modules/owlcarousel2/dist/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{url('vendor/assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css')}}">
 
+      <!-- CSS Libraries -->
+    <link rel="stylesheet" href="{{url('vendor/assets/modules/datatables/datatables.min.css')}}">
+    <link rel="stylesheet" href="{{url('vendor/assets/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css')}}">
+    <link rel="stylesheet" href="{{url('vendor/assets/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css')}}">
+
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{url('vendor/assets/css/style.css')}}">
     <link rel="stylesheet" href="{{url('vendor/assets/css/components.css')}}">

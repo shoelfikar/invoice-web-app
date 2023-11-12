@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('dashboard');
 Route::get('/company', [CompanyController::class, 'index'])->name('setting.company');
 Route::get('/login',[AuthController::class, 'index'])->name('user.index');
+Route::get('/login',[AuthController::class, 'index'])->name('user.index');
 Route::post('/login',[AuthController::class, 'login'])->name('user.login');
 Route::get('/logout',[AuthController::class, 'logout'])->name('user.logout');
 

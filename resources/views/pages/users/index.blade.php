@@ -3,6 +3,8 @@
 @push('header')
     <!-- Template CSS -->
     {{-- <link rel="stylesheet" href="{{url('vendor/assets/css/rtl.css')}}"> --}}
+    {{-- <link rel="stylesheet" href="{{url('vendor/assets/css/user.custom.css')}}"> --}}
+
 @endpush
 
 
@@ -19,104 +21,112 @@
 
         <div class="section-body">
             <div class="row">
+                <div class="col-12 mb-3">
+                    <a href="#" class="btn btn-icon icon-left btn-primary create-user" data-title="Create User"><i class="far fa-edit"></i> Add User</a>
+                </div>
                 <div class="col-12">
-                <div class="card">
-                    <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-striped" id="table-1">
-                        <thead>
-                            <tr>
-                            <th class="text-center">
-                                #
-                            </th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Date Created</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <td>
-                                1
-                            </td>
-                            <td>Create a mobile app</td>
-                            <td class="align-middle">
-                                <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
-                                <div class="progress-bar bg-success" data-width="100%"></div>
-                                </div>
-                            </td>
-                            <td>
-                                <img alt="image" src="assets/img/avatar/avatar-5.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Wildan Ahdian">
-                            </td>
-                            <td>2018-01-20</td>
-                            <td><div class="badge badge-success">Completed</div></td>
-                            <td><a href="#" class="btn btn-secondary">Detail</a></td>
-                            </tr>
-                            <tr>
-                            <td>
-                                2
-                            </td>
-                            <td>Redesign homepage</td>
-                            <td class="align-middle">
-                                <div class="progress" data-height="4" data-toggle="tooltip" title="0%">
-                                <div class="progress-bar" data-width="0"></div>
-                                </div>
-                            </td>
-                            <td>
-                                <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Nur Alpiana">
-                                <img alt="image" src="assets/img/avatar/avatar-3.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Hariono Yusup">
-                                <img alt="image" src="assets/img/avatar/avatar-4.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Bagus Dwi Cahya">
-                            </td>
-                            <td>2018-04-10</td>
-                            <td><div class="badge badge-info">Todo</div></td>
-                            <td><a href="#" class="btn btn-secondary">Detail</a></td>
-                            </tr>
-                            <tr>
-                            <td>
-                                3
-                            </td>
-                            <td>Backup database</td>
-                            <td class="align-middle">
-                                <div class="progress" data-height="4" data-toggle="tooltip" title="70%">
-                                <div class="progress-bar bg-warning" data-width="70%"></div>
-                                </div>
-                            </td>
-                            <td>
-                                <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Rizal Fakhri">
-                                <img alt="image" src="assets/img/avatar/avatar-2.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Hasan Basri">
-                            </td>
-                            <td>2018-01-29</td>
-                            <td><div class="badge badge-warning">In Progress</div></td>
-                            <td><a href="#" class="btn btn-secondary">Detail</a></td>
-                            </tr>
-                            <tr>
-                            <td>
-                                4
-                            </td>
-                            <td>Input data</td>
-                            <td class="align-middle">
-                                <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
-                                <div class="progress-bar bg-success" data-width="100%"></div>
-                                </div>
-                            </td>
-                            <td>
-                                <img alt="image" src="assets/img/avatar/avatar-2.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Rizal Fakhri">
-                                <img alt="image" src="assets/img/avatar/avatar-5.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Isnap Kiswandi">
-                                <img alt="image" src="assets/img/avatar/avatar-4.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Yudi Nawawi">
-                                <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Khaerul Anwar">
-                            </td>
-                            <td>2018-01-16</td>
-                            <td><div class="badge badge-success">Completed</div></td>
-                            <td><a href="#" class="btn btn-secondary">Detail</a></td>
-                            </tr>
-                        </tbody>
-                        </table>
-                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped" id="table-1">
+                            <thead>
+                                <tr>
+                                <th class="text-center">
+                                    #
+                                </th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Date Created</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @php
+                                $count = 0
+                                @endphp
+                                @foreach ($users as $user)
+                                @php
+                                    $count++
+                                @endphp
+                                    <tr>
+                                        <td>
+                                            {{$count}}
+                                        </td>
+                                        <td>{{$user->name}}</td>
+                                        <td class="align-middle">
+                                            {{$user->email}}
+                                        </td>
+                                        <td>
+                                            {{$user->role}}
+                                        </td>
+                                        <td>{{$user->created_at}}</td>
+                                        <td><div class="badge {{$user->status == 1 ? 'badge-success':'badge-danger'}}">{{$user->status == 1 ? 'Active':'Inactive'}}</div></td>
+                                        <td><a href="#" class="btn btn-secondary create-user" data-title="Update User">Detail</a></td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                            </table>
+                        </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <form class="modal-part" id="modal-login-part">
+                <p>This form for create or update user</p>
+                <div class="form-group">
+                  <label>Name</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Name" name="name">
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Email" name="email">
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" placeholder="Password" name="password">
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label>Retype Password</label>
+                    <div class="input-group">
+                      <input type="password" class="form-control" placeholder="Password" name="retype_password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Select Role</label>
+                    <select class="form-control">
+                      <option>Admin</option>
+                      <option>Super Admin</option>
+                      <option>Guest</option>
+                    </select>
+                </div>
+            </form>
+
+            <div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer bg-whitesmoke br">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
                 </div>
             </div>
         </div>
@@ -131,8 +141,42 @@
     <script src="{{url('vendor/assets/modules/datatables/Select-1.2.4/js/dataTables.select.min.js')}}"></script>
     <script src="{{url('vendor/assets/modules/jquery-ui/jquery-ui.min.js')}}"></script>
     <script src="{{url('vendor/assets/js/page/modules-datatables.js')}}"></script>
+    <script src="{{url('vendor/assets/js/page/components-table.js')}}"></script>
 
     <script>
+        let title = $(".create-user").attr("data-title")
+        $(".create-user").fireModal({
+            title: title,
+            body: $("#modal-login-part"),
+            footerClass: 'bg-whitesmoke',
+            autoFocus: false,
+            onFormSubmit: function(modal, e, form) {
+                // Form Data
+                let form_data = $(e.target).serialize();
+                console.log(form_data)
 
+                // DO AJAX HERE
+                let fake_ajax = setTimeout(function() {
+                form.stopProgress();
+                modal.find('.modal-body').prepend('<div class="alert alert-info">Please check your browser console</div>')
+
+                clearInterval(fake_ajax);
+                }, 1500);
+
+                e.preventDefault();
+            },
+            shown: function(modal, form) {
+                console.log(form)
+            },
+            buttons: [
+                {
+                    text: 'Submit',
+                    submit: true,
+                    class: 'btn btn-primary btn-shadow',
+                    handler: function(modal) {
+                    }
+                }
+            ]
+        });
     </script>
 @endpush
