@@ -31,7 +31,7 @@
                             <table class="table table-striped" id="table-1">
                             <thead>
                                 <tr>
-                                <th class="text-center">
+                                <th>
                                     #
                                 </th>
                                 <th>Name</th>
@@ -51,19 +51,19 @@
                                     $count++
                                 @endphp
                                     <tr>
-                                        <td>
+                                        <td class="align-middle">
                                             {{$count}}
                                         </td>
-                                        <td>{{$user->name}}</td>
+                                        <td class="align-middle">{{$user->name}}</td>
                                         <td class="align-middle">
                                             {{$user->email}}
                                         </td>
                                         <td>
                                             {{$user->role}}
                                         </td>
-                                        <td>{{$user->created_at}}</td>
-                                        <td><div class="badge {{$user->status == 1 ? 'badge-success':'badge-danger'}}">{{$user->status == 1 ? 'Active':'Inactive'}}</div></td>
-                                        <td><a href="#" class="btn btn-secondary create-user" data-title="Update User">Detail</a></td>
+                                        <td class="align-middle">{{$user->created_at}}</td>
+                                        <td class="align-middle"><div class="badge {{$user->status == 1 ? 'badge-success':'badge-danger'}}">{{$user->status == 1 ? 'Active':'Inactive'}}</div></td>
+                                        <td class="align-middle"><a href="#" class="btn btn-secondary create-user" data-title="Update User">Detail</a></td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -135,13 +135,6 @@
 @endsection
 
 @push('script')
-    <!-- JS Libraies -->
-    <script src="{{url('vendor/assets/modules/datatables/datatables.min.js')}}"></script>
-    <script src="{{url('vendor/assets/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js')}}"></script>
-    <script src="{{url('vendor/assets/modules/datatables/Select-1.2.4/js/dataTables.select.min.js')}}"></script>
-    <script src="{{url('vendor/assets/modules/jquery-ui/jquery-ui.min.js')}}"></script>
-    <script src="{{url('vendor/assets/js/page/modules-datatables.js')}}"></script>
-    <script src="{{url('vendor/assets/js/page/components-table.js')}}"></script>
 
     <script>
         let title = $(".create-user").attr("data-title")

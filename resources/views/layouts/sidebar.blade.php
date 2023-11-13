@@ -21,7 +21,8 @@
           <ul class="dropdown-menu">
             <li><a class="nav-link" href="{{route('setting.company')}}">Company</a></li>
             <li><a class="nav-link" href="layout-transparent.html">Rekening</a></li>
-            <li><a class="nav-link" href="layout-top-navigation.html">Products</a></li>
+            <li><a class="nav-link" href="{{route('product.index')}}">Products</a></li>
+            <li><a class="nav-link" href="{{route('category.index')}}">Categories</a></li>
             <li><a class="nav-link" href="{{route('user.index')}}">Users</a></li>
           </ul>
         </li>

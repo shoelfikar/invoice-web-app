@@ -15,6 +15,14 @@
 <script src="{{url('vendor/assets/modules/summernote/summernote-bs4.js')}}"></script>
 <script src="{{url('vendor/assets/modules/chocolat/dist/js/jquery.chocolat.min.js')}}"></script>
 
+<!-- JS Libraies -->
+<script src="{{url('vendor/assets/modules/datatables/datatables.min.js')}}"></script>
+<script src="{{url('vendor/assets/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{url('vendor/assets/modules/datatables/Select-1.2.4/js/dataTables.select.min.js')}}"></script>
+<script src="{{url('vendor/assets/modules/jquery-ui/jquery-ui.min.js')}}"></script>
+<script src="{{url('vendor/assets/js/page/modules-datatables.js')}}"></script>
+<script src="{{url('vendor/assets/js/page/components-table.js')}}"></script>
+
 
 
 @stack('script')
