@@ -58,7 +58,7 @@
                                         <td class="align-middle">
                                             {{$user->email}}
                                         </td>
-                                        <td>
+                                        <td class="align-middle">
                                             {{$user->role}}
                                         </td>
                                         <td class="align-middle">{{$user->created_at}}</td>

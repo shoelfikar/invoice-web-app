@@ -2,6 +2,12 @@
 <html lang="en">
     @include('layouts.header')
 
+    <style>
+        .main-sidebar .sidebar-menu li ul.dropdown-menu li a {
+            padding-left: 45px;
+        }
+    </style>
+
 <body>
   <div id="app">
     <div class="main-wrapper main-wrapper-1">

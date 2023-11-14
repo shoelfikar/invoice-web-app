@@ -26,13 +26,16 @@ Route::post('/login',[AuthController::class, 'login'])->name('user.login');
 Route::get('/logout',[AuthController::class, 'logout'])->name('user.logout');
 
 
+Route::prefix('master')->group(function () {
+    //user
+    Route::get('/user',[UserController::class, 'index'])->name('user.index');
 
-//user
-Route::get('/user',[UserController::class, 'index'])->name('user.index');
+    //product
+    Route::get('/product',[ProductController::class, 'index'])->name('product.index');
+    Route::get('/product/create',[ProductController::class, 'create'])->name('product.create');
 
-//product
-Route::get('/product',[ProductController::class, 'index'])->name('product.index');
-Route::get('/product/create',[ProductController::class, 'create'])->name('product.create');
+    //category
+    Route::get('/categories',[CategoryController::class, 'index'])->name('category.index');
 
-//category
-Route::get('/categories',[CategoryController::class, 'index'])->name('category.index');
+});
+
