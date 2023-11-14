@@ -22,7 +22,7 @@
         @include('layouts.footer')
     </div>
   </div>
-
+    @include('components.loading')
     @include('layouts.script')
 </body>
 </html>

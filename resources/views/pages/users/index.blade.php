@@ -44,7 +44,7 @@
                             </thead>
                             <tbody>
                                 @php
-                                $count = 0
+                                    $count = 0
                                 @endphp
                                 @foreach ($users as $user)
                                 @php
@@ -103,9 +103,9 @@
                 <div class="form-group">
                     <label>Select Role</label>
                     <select class="form-control">
-                      <option>Admin</option>
-                      <option>Super Admin</option>
-                      <option>Guest</option>
+                      <option value="Admin">Admin</option>
+                      <option value="Super Admin">Super Admin</option>
+                      <option value="Guest">Guest</option>
                     </select>
                 </div>
             </form>
@@ -146,7 +146,7 @@
             onFormSubmit: function(modal, e, form) {
                 // Form Data
                 let form_data = $(e.target).serialize();
-                console.log(form_data)
+                console.log(form)
 
                 // DO AJAX HERE
                 let fake_ajax = setTimeout(function() {

@@ -24,7 +24,6 @@
             <li><a class="nav-link" href="{{route('user.index')}}"><img src="{{url('vendor/assets/img/icons/users.png')}}" width="20" class="mr-4 ml-2"/> <span>Users</span></a></li>
             {{-- </ul> --}}
             <li><a class="nav-link" href="{{route('setting.company')}}"><img src="{{url('vendor/assets/img/icons/company.png')}}" width="20" class="mr-4 ml-2"/> <span>Company</span></a></li>
-            <li><a class="nav-link" href="layout-transparent.html"><img src="{{url('vendor/assets/img/icons/company.png')}}" width="20" class="mr-4 ml-2"/> <span>Rekening</span></a></li>
         </li>
         {{-- <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
         <li class="dropdown">
