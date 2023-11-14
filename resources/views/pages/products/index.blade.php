@@ -14,7 +14,7 @@
         <div class="section-body">
             <div class="row">
                 <div class="col-12 mb-3">
-                    <a href="#" class="btn btn-icon icon-left btn-primary create-user" data-title="Create User"><i class="far fa-edit"></i> Create Product</a>
+                    <a href="{{route('product.create')}}" class="btn btn-icon icon-left btn-primary create-user"><i class="far fa-edit"></i> Create Product</a>
                 </div>
                 <div class="col-12">
                     <div class="card">

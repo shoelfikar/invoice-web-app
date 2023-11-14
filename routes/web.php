@@ -32,6 +32,7 @@ Route::get('/user',[UserController::class, 'index'])->name('user.index');
 
 //product
 Route::get('/product',[ProductController::class, 'index'])->name('product.index');
+Route::get('/product/create',[ProductController::class, 'create'])->name('product.create');
 
 //category
 Route::get('/categories',[CategoryController::class, 'index'])->name('category.index');

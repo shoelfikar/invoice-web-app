@@ -52,7 +52,7 @@
             <li><a class="nav-link" href="bootstrap-typography.html">Typography</a></li>
           </ul>
         </li>
-        <li class="menu-header">Stisla</li>
+        <li class="menu-header">Transaction</li>
         <li class="dropdown">
           <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Components</span></a>
           <ul class="dropdown-menu">

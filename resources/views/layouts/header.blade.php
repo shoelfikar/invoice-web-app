@@ -18,11 +18,13 @@
     <link rel="stylesheet" href="{{url('vendor/assets/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css')}}">
     <link rel="stylesheet" href="{{url('vendor/assets/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css')}}">
 
+
+    @stack('header')
+
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{url('vendor/assets/css/style.css')}}">
     <link rel="stylesheet" href="{{url('vendor/assets/css/components.css')}}">
 
-    @stack('header')
     {{-- <!-- Start GA -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
     <script>
